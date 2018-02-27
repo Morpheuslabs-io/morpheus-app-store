@@ -14,3 +14,5 @@ The Application Library implemention will follow the overall Morpheus Labs BPaaS
 The source codes are in Morpheus Labs own private repository and not open to public. Morpheus lab will determine in future if this module will be open sourced.
 
 For public's interest, Morpheus Labs will share the snippet of the source codes in this Public repositoty when necessary.
+
+See the details from Application Library wiki: https://github.com/Morpheuslabs-io/morpheus-app-store/wiki
