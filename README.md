@@ -16,3 +16,6 @@ The source codes are in Morpheus Labs own private repository and not open to pub
 For public's interest, Morpheus Labs will share the snippet of the source codes in this Public repository when necessary.
 
 See the details from Application Library wiki: https://github.com/Morpheuslabs-io/morpheus-app-store/wiki
+
+# Application Store IAB (In App Billing)
+
