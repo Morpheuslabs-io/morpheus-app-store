@@ -19,4 +19,4 @@ See the details from Application Library wiki: https://github.com/Morpheuslabs-i
 
 # Application Store IAB (In App Billing)
 
-Source codes for public will be shared soon.
+The smart contract development is actually in progress . Here some initial version concept https://github.com/Morpheuslabs-io/morpheus-app-store/tree/master/deploy/contracts

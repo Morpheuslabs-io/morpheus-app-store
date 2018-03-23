@@ -8,14 +8,14 @@ contract MITxToken {
 
 contract MITxAppStoreIABInterface {
     function division(uint numerator, uint denominator) public constant returns (uint);
-    function buy(uint _amount, string _sku, address _addr_appc, address _dev, address _appstore) public constant returns (bool);
+    function buy(uint _amount, string _productSku, address _addr_appc, address _dev, address _appstore) public constant returns (bool);
 }
 
 contract MITxAppStoreIAB is MITxAppStoreIABInterface {
     uint public dev_share = 80;
     uint public appstore_share = 20;
 
-    event Buy(uint _amount, string _sku, address _from, address _dev, address _appstore);
+    event Buy(uint _amount, string _productSku, address _from, address _dev, address _appstore);
 
     function division(uint numerator, uint denominator) public constant returns (uint) {
         uint _quotient = numerator / denominator;
@@ -23,7 +23,7 @@ contract MITxAppStoreIAB is MITxAppStoreIABInterface {
     }
 
      // call when user purchase an application from the App Store
-    function buy(uint256 _amount, string _sku, address _addr_appc, address _dev, address _appstore) public constant returns (bool) {
+    function buy(uint256 _amount, string _productSku, address _addr_appc, address _dev, address _appstore) public constant returns (bool) {
         require(_addr_appc != 0x0);
         require(_dev != 0x0);
         require(_appstore != 0x0);
@@ -41,7 +41,7 @@ contract MITxAppStoreIAB is MITxAppStoreIABInterface {
         mitx_iab.transferFrom(msg.sender, _dev, amounts[0]);
         mitx_iab.transferFrom(msg.sender, _appstore, amounts[1]);
 
-        Buy(_amount, _sku, msg.sender, _dev, _appstore);
+        Buy(_amount, _productSku, msg.sender, _dev, _appstore);
 
         return true;
     }
