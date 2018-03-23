@@ -22,6 +22,7 @@ contract MITxAppStoreIAB is MITxAppStoreIABInterface {
         return _quotient;
     }
 
+     // call when user purchase an application from the App Store
     function buy(uint256 _amount, string _sku, address _addr_appc, address _dev, address _appstore) public constant returns (bool) {
         require(_addr_appc != 0x0);
         require(_dev != 0x0);
